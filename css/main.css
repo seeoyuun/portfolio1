@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+/*파일 merging(합치기)*/
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+@import url(gridSetFlex.css);
+@import url(gridView.css);
+
+/*검수용 이미지*/
+.vi {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: .5;
+    width: 100%;
+    display: none;
+
+}
+
+/*기본셋팅*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #333;
+    width: 100%;
+
+}
+
+body,
+table {
+    line-height: 1;
+    font-size: 0.75rem;
+}
+
+input {
+    border: 0;
+}
+
+/*헤더영역*/
+#header_logo {
+    background: url(../images/LOGO/logo_mystic.jpg) no-repeat center/80%;
+
+}
+
+.header_icon {
+    display: flex;
+    margin-left: auto;
+    width: 250px;
+    text-align: right;
+}
+
+.header_icon img {
+    width: 60%;
+}
+
+.gbx {
+    margin-left: auto;
+}
+
+.gnb {
+    width: 400px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: auto;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    height: auto;
+}
+.gnb li {
+    position: relative;
+    padding-right: 30px;
+    /*float: left;*/
+    width: 150px;
+    height: 50px;
+    box-sizing: border-box;
+    
+}
+.gnb a {
+    position: absolute;
+    display: block;
+    font-size: 1.5625rem;
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+.gnb a:hover {
+    font-weight: 800;
+}
+
+
+/*서브메뉴*/
+.smenu {
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    transform: translateX(-50%);
+    display: none;
+    width: 200px;
+    height: auto;
+    border: 1px solid #777;
+    z-index: 12000;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 50px;
+    
+}
+.smenu li{
+    width: 100%;
+}
+
+/*배너 영역*/
+#ban_list li {
+    float: left;
+    /*옆으로 흐르게*/
+}
+
+.ban {
+    position: relative;
+    width: 100%;
+}
+
+/*배너만 크기 100% 속박스*/
+.ban .inbox {
+    width: 100%;
+}
+
+#ban_list {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 1920px;
+    float: left;
+    /*    height: 938px;*/
+}
+
+#slide {
+    /*ul*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 500%;
+}
+
+#slide li {
+    /*부모가 5배되었으므로 5등분함!*/
+    width: 20%;
+    height: 100%;
+}
+
+#slide li img {
+    /*이미지는 박스에 맞춤!*/
+    width: 100%;
+    height: 100%;
+}
+
+
+/*아티스트 슬라이드 부모박스(숨김화면)*/
+.artbx {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+
+
+#artist {
+    position: relative;
+    /*부모자격*/
+}
+
+
+/*이동버튼*/
+.arrow {
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+.arrow img {
+    width: 100%;
+
+}
+
+.arrow.prev {
+    left: 20px;
+}
+
+.arrow.next {
+    right: 20px;
+}
+
+.art_arrow {
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+.art_arrow img {
+    width: 100%;
+
+}
+
+.art_arrow.prev {
+    left: 20px;
+}
+
+.art_arrow.next {
+    right: 20px;
+}
+
+
+
+.bar {
+    width: 57px;
+    height: 4px;
+    background-color: #333;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.t1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.875rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 8px;
+
+}
+
+.name {
+    margin-top: 40px;
+}
+
+/*아티스트*/
+.artist_list {
+    position: relative;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    padding-top: 132px;
+}
+
+.artist_list li {
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    transition: all .4s ease-in-out;
+}
+
+.artist_list li.on {
+    transform: scale(1.4);
+}
+
+.artist_photo {
+    width: 200px;
+    height: 320px;
+}
+
+.artist_name {
+    padding-top: 10%;
+    font-size: 1.25rem;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+
+}
+
+/*뮤직비디오 슬라이드 부모박스(숨김화면)*/
+.mvbx {
+    position: relative;
+    width: 100%;
+    height: 600px;
+
+}
+
+.mvhid{
+    overflow: hidden;
+}
+
+/*뮤직비디오*/
+#mv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*부모자격*/
+    overflow: hidden;
+}
+
+.mv_list_1 {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+}
+
+.mv_list_1 li {
+    width: 9.99%;
+    margin-right: 5px;
+}
+
+.mv_arrow {
+    position: absolute;
+    bottom: 8%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+.mv_arrow img {
+    width: 100%;
+}
+
+.mv_arrow.prev {
+    left: 40px;
+}
+
+.mv_arrow.next {
+    right: 40px;
+}
+
+
+/*커뮤니티*/
+.combx {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.commu_box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #777;
+    overflow: hidden;
+
+}
+
+.commu_box a {
+    color: #333;
+}
+
+.commu_photo {
+    width: 100%;
+
+}
+
+.commu_title {
+    font-size: 1.5625rem;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.commu_text {
+    font-size: 0.875rem;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.commu_date {
+    font-size: 0.625rem;
+
+}
+
+.combx li:nth-child(2),
+.combx li:nth-child(5) {
+    position: relative;
+    top: 100px;
+}
+
+/*푸터*/
+.info {
+    width: 100%;
+    height: 100%;
+    background-color: #232121;
+}
+
+.address {
+    color: #fff;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 1.125rem;
+    padding-top: 45px;
+}
+
+.fs {
+    color: #fff;
+    font-size: 1.25rem;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 45px;
+}
+
+.fs_wrap {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 10px;
+
+}

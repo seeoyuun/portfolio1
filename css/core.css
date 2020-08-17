@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+
+/*웹폰트*/
+     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+    /*오슬로 - 영어*/
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+    /*블랙한산-한글*/
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    /*도현- 한글*/
+
+/*공통*/
+body{
+    font-family: dotum, "돋움", sans-serif;
+    color: #808080;
+    line-height: 136%;
+    font-size: 12px;
+}
+
+/* 공통 class */
+
+/*중앙정렬 속박스*/
+.inbox{
+    width: 1920px;
+    max-width: 100%;
+    margin: 0 auto;
+    outline: 1px dashed red;
+    box-sizing: border-box;
+}
+
+/*IR(Image Replacement) class*/
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*비율유지 class*/
+.rbx{
+    position: relative;
+    height: auto;/*높이값이 없음!*/
+}
+/*가상요소로 패딩탑을 이용한 높이값 만들기!*/
+.rbx::before{
+    content: "";
+    display: block;
+    padding-top: 45%;
+    /*비율에 따라 변경*/
+}
+.ibx{/*비율유지속박스*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

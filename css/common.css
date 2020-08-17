@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/*레이아웃 디자인*/
+
+/*상단영역*/
+#top [class*=col-]{
+    height: 100px;
+}
+/*배너영역*/
+/*#ban [class*=col-]{
+    height: 938px;
+}*/
+/*아티스트영역*/
+#artist .ah1[class*=col-]{
+    height:135px;
+}
+#artist .ah2[class*=col-]{
+    height:598px;
+}
+#mv .mh1[class*=col-]{
+    height: 202px;
+}
+#mv .mh2[class*=col-]{
+    height: 410px;
+}
+#mv .mh3[class*=col-]{
+    height: 201px;
+}
+/*커뮤니티영역*/
+#commu .ch1[class*=col-]{
+    height: 156px;
+}
+#commu .ch2[class*=col-]{
+    height: 780px;
+}
+#commu .ch3[class*=col-]{
+    height: 780px;
+}
+/*빈칸영역*/
+#blank [class*=col-]{
+    height: 104px;
+}
+/*하단영역*/
+#info [class*=col-]{
+    height: 158px;
+}
